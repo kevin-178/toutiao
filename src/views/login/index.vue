@@ -1,10 +1,6 @@
 <template>
     <div>
-        <van-nav-bar
-            title="登录"
-            left-arrow
-            @click-left="onClickLeft"
-        />
+        <MyHeader title="登录"></MyHeader>
         <van-form @submit="submitLogin">
             <van-field v-model="phoneNum" required name="phoneNum" clearable placeholder="请输入手机号" >
                 <i slot="left-icon" class="toutiao toutiao-shouji"></i>
@@ -40,9 +36,7 @@
             }
         },
         methods:{
-            onClickLeft(){
-                this.$router.go(-1);
-            },
+           
             submitLogin(val){
                 //val是表单提交的内容，对象的形式
                 console.log(val)
